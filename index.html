@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f8f2" />
+  <meta name="description" content="EcoCycle connects you with local electronics repair experts. A little repair. A lot more life." />
+  <title>EcoCycle — A little repair. A lot more life.</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <svg class="symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="cycle" viewBox="0 0 32 32"><path d="M26 12A10.5 10.5 0 0 0 7.4 8L4 12m0 0V5m0 7h7M6 20a10.5 10.5 0 0 0 18.6 4l3.4-4m0 0v7m0-7h-7"/></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="leaf" viewBox="0 0 32 32"><path d="M26 4C11 3 4 10 6 20c2 9 18 10 20-16Z"/><path d="M5 29 20 12m-8 10v-7m0 7 8-1"/></symbol>
+  </svg>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header shell">
+    <a class="brand" href="./" aria-label="EcoCycle home"><svg aria-hidden="true"><use href="#cycle"/></svg>EcoCycle<span>.</span></a>
+    <span class="header-note"><span class="dot"></span> A BETTER CYCLE STARTS HERE</span>
+  </header>
+
+  <main class="experience shell" id="main" data-state="broken">
+    <div class="intro">
+      <p class="eyebrow">LESS WASTE. MORE LIFE.</p>
+      <h1>A little repair.<br />A lot more <span>life.</span></h1>
+      <p class="description">Your electronics deserve another chance.<br />Find local repair experts, with clear fixes and upfront costs.</p>
+    </div>
+
+    <div class="phone-scene" id="phone-scene" role="img" aria-label="A phone with a cracked, dark screen. Submit the email form to watch it repair.">
+      <div class="orbit orbit-one" aria-hidden="true"></div>
+      <div class="orbit orbit-two" aria-hidden="true"></div>
+      <span class="scene-cross cross-one" aria-hidden="true">+</span>
+      <span class="scene-cross cross-two" aria-hidden="true">+</span>
+      <div class="phone-shadow" aria-hidden="true"></div>
+      <div class="phone" aria-hidden="true">
+        <span class="side-button button-one"></span><span class="side-button button-two"></span><span class="side-button button-three"></span>
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="healthy-wallpaper"><span></span><span></span><span></span></div>
+            <div class="screen-top"><span>9:41</span><span class="screen-indicators"><i></i><i></i><i></i><b></b></span></div>
+            <div class="camera"><span></span></div>
+            <div class="broken-display"><span class="broken-time">9:41</span><span class="broken-message">A LITTLE HELP?</span><svg class="broken-battery" viewBox="0 0 44 24"><rect x="2" y="3" width="35" height="18" rx="4"/><path d="M40 9v6M8 8v8m9-6 3 3-3 3"/></svg></div>
+            <div class="fixed-display"><div class="leaf-badge"><svg><use href="#leaf"/></svg></div><span class="fixed-title">Back to life.</span><span class="fixed-subtitle">GOOD FOR ANOTHER CHAPTER.</span></div>
+            <svg class="cracks" viewBox="0 0 260 520" preserveAspectRatio="none">
+              <g class="crack-main"><path d="m0 80 62 58 33 16 51 70 23 23 46 36 45 14M169 247l-19 53-5 66-43 57-18 97M169 247l10-71 28-50 4-59L239 0M169 247l-63-5-30 26-50 8L0 305M169 247l17 65 37 37 4 82 33 49"/><path d="m0 191 47 30 35-1 24 22m1-72 18-55-9-31 3-35L96 0m49 366 37 17 13 36 32 12m-51-230 38 8 17-17 29-4m-198-50 9-29-15-27 8-23m42 183-9 52-26 24-6 48-30 17L0 414"/></g>
+              <g class="crack-fine"><path d="m169 247-38-29-21-3m59 32-3 40 9 29m-6-69 36-14 16 8 39-9m-91 15-23 5-17 35m40-40 18-35m-6 14 13-47 40-23 26-9M76 268l7 35-27 20m94-23 35 21 4 35m-44 10-28-8-34 12m-21-232 2 32-17 51m161-95 25 1 27-18m-115 257 9 47-19 32 6 41m-39-63-40 7-23 31m190-170 8-35 28-16"/></g>
+              <path class="impact" d="m162 235 8 5 7-1-2 9 5 8-12-3-7 5 1-11-5-6Z"/>
+            </svg>
+            <div class="repair-sweep"></div>
+            <div class="home-indicator"></div>
+          </div>
+        </div>
+      </div>
+      <div class="scene-label" aria-hidden="true"><span class="label-dot"></span><span id="phone-caption">NOT THE END OF THE STORY.</span></div>
+      <span class="repair-spark spark-one" aria-hidden="true">✦</span><span class="repair-spark spark-two" aria-hidden="true">✧</span><span class="repair-spark spark-three" aria-hidden="true">✦</span>
+    </div>
+
+    <div class="signup">
+      <p class="invitation">Enter your email. Give this phone a second life.</p>
+      <form id="early-access-form" novalidate>
+        <label class="sr-only" for="email">Your email address</label>
+        <div class="form-row"><input id="email" name="email" type="email" placeholder="Your email address" autocomplete="email" inputmode="email" required maxlength="254" aria-describedby="email-error" disabled /><button id="submit-button" type="submit" disabled><span id="button-label">Get early access</span><svg aria-hidden="true"><use href="#arrow"/></svg></button></div>
+        <p id="email-error" class="error" role="alert" hidden></p>
+      </form>
+      <div id="success" class="success" hidden><span class="success-check"><svg aria-hidden="true"><use href="#check"/></svg></span><div><strong>That’s the power of a second chance.</strong><button id="reset-button" type="button">Try it again <span aria-hidden="true">↻</span></button></div></div>
+      <p class="sr-only" role="status" aria-live="polite" id="repair-status"></p>
+      <noscript><p class="error">Enable JavaScript to try the repair animation.</p></noscript>
+    </div>
+  </main>
+
+  <section class="video-section shell" aria-label="EcoCycle video">
+    <div class="video-player">
+      <iframe src="https://www.youtube-nocookie.com/embed/Kio_tc0BqF0" title="EcoCycle video" width="900" height="506" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <a class="video-link" href="https://www.youtube.com/watch?v=Kio_tc0BqF0" target="_blank" rel="noopener noreferrer">Watch on YouTube <span aria-hidden="true">↗</span></a>
+  </section>
+
+  <footer class="footer shell"><span>Repair. Reuse. Repeat.</span><span>A brighter future for the things we own.</span></footer>
+</body>
+</html>
