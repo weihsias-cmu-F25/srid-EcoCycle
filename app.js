@@ -12,6 +12,22 @@
   const scene = document.querySelector("#phone-scene");
   const caption = document.querySelector("#phone-caption");
   let repairTimer;
+  let earlyAccessTracked = false;
+
+  function trackEarlyAccess() {
+    // Only the validated interaction is measured. Never include the email.
+    // Replaying the phone animation does not add another event on this page.
+    if (earlyAccessTracked || typeof window.gtag !== "function") return;
+    try {
+      window.gtag("event", "early_access_submit", {
+        form_id: "early-access-form",
+        interaction_type: "demo",
+      });
+      earlyAccessTracked = true;
+    } catch {
+      // Analytics must never prevent the repair animation from working.
+    }
+  }
 
   function clearError() {
     email.removeAttribute("aria-invalid");
@@ -33,6 +49,7 @@
   function handleEarlyAccess() {
     experience.dataset.state = "repairing";
     form.reset();
+    trackEarlyAccess();
     email.disabled = true;
     submit.disabled = true;
     buttonLabel.textContent = "Repairing…";
